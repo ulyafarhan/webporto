@@ -2,19 +2,21 @@
 
 return [
     [
-        'category' => 'Frontend',
+        'category' => 'Backend Engineering',
         'items' => [
-            ['name' => 'Tailwind CSS', 'level' => 'Advanced', 'icon' => 'wind'],
-            ['name' => 'JavaScript', 'level' => 'Intermediate', 'icon' => 'code'],
-            ['name' => 'Blade Engine', 'level' => 'Advanced', 'icon' => 'layout'],
+            ['name' => 'Laravel Ecosystem', 'level' => 'Advanced'],
+            ['name' => 'PHP Core & OOP Architecture', 'level' => 'Advanced'],
+            ['name' => 'MySQL Database Architecture', 'level' => 'Intermediate'],
+            ['name' => 'RESTful API Engineering', 'level' => 'Advanced'],
         ]
     ],
     [
-        'category' => 'Backend',
+        'category' => 'Frontend Integration',
         'items' => [
-            ['name' => 'Laravel 13', 'level' => 'Intermediate', 'icon' => 'cpu'],
-            ['name' => 'MySQL/ORM', 'level' => 'Advanced', 'icon' => 'database'],
-            ['name' => 'REST API', 'level' => 'Intermediate', 'icon' => 'api'],
+            ['name' => 'Tailwind CSS v4', 'level' => 'Advanced'],
+            ['name' => 'Alpine.js / JavaScript v6', 'level' => 'Intermediate'],
+            ['name' => 'Blade Templating Engine', 'level' => 'Advanced'],
+            ['name' => 'Responsive Components Layout', 'level' => 'Advanced'],
         ]
-    ]
+    ],
 ];

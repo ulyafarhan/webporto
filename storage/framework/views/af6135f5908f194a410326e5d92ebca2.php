@@ -1,5 +1,14 @@
-<x-layout :data="$data">
-    <x-slot:title>Pengalaman</x-slot>
+<?php if (isset($component)) { $__componentOriginal23a33f287873b564aaf305a1526eada4 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal23a33f287873b564aaf305a1526eada4 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.layout','data' => ['data' => $data]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('layout'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['data' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($data)]); ?>
+     <?php $__env->slot('title', null, []); ?> Pengalaman <?php $__env->endSlot(); ?>
 
     <section class="py-12 md:py-16 border-b border-slate-200/60 mb-12 animate-fade-in">
         <div class="space-y-3">
@@ -11,28 +20,29 @@
 
     <section class="mb-16">
         <div class="space-y-4">
-            @foreach($data['experiences'] as $exp)
+            <?php $__currentLoopData = $data['experiences']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $exp): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="bento-card p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-10 items-start group">
                 <div class="md:w-52 shrink-0 space-y-1">
                     <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/5 border border-primary/10 text-primary text-[10px] font-black uppercase tracking-wider">
                         <i data-lucide="calendar" class="w-3 h-3"></i>
-                        {{ $exp['period'] }}
+                        <?php echo e($exp['period']); ?>
+
                     </div>
-                    <div class="text-[11px] font-black text-slate-400 uppercase tracking-widest pt-1 block">{{ $exp['company'] }}</div>
+                    <div class="text-[11px] font-black text-slate-400 uppercase tracking-widest pt-1 block"><?php echo e($exp['company']); ?></div>
                 </div>
                 
                 <div class="flex-1 min-w-0 space-y-3">
-                    <h3 class="text-base font-black text-dark tracking-tight group-hover:text-primary transition-colors duration-300">{{ $exp['title'] }}</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed font-medium">{{ $exp['description'] }}</p>
+                    <h3 class="text-base font-black text-dark tracking-tight group-hover:text-primary transition-colors duration-300"><?php echo e($exp['title']); ?></h3>
+                    <p class="text-xs text-slate-500 leading-relaxed font-medium"><?php echo e($exp['description']); ?></p>
                     
                     <div class="flex flex-wrap gap-1.5 pt-2">
-                        @foreach($exp['tags'] as $tag)
-                        <span class="text-[8px] font-black px-2.5 py-0.5 bg-slate-50 text-slate-400 border border-slate-100 rounded-md uppercase tracking-wide">#{{ $tag }}</span>
-                        @endforeach
+                        <?php $__currentLoopData = $exp['tags']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <span class="text-[8px] font-black px-2.5 py-0.5 bg-slate-50 text-slate-400 border border-slate-100 rounded-md uppercase tracking-wide">#<?php echo e($tag); ?></span>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </section>
 
@@ -136,9 +146,18 @@
             <h2 class="text-xl font-black text-dark tracking-tight">Ingin Memulai Kerja Sama Strategis?</h2>
             <p class="text-xs text-slate-500 leading-relaxed font-medium">Saya siap berkontribusi penuh dalam pengerjaan arsitektur backend, diskusi ilmiah informatika, maupun digitalisasi sistem instansi Anda.</p>
             <div class="flex justify-center gap-3 pt-2">
-                <a href="mailto:{{ $data['profile']['email'] }}" class="btn-primary text-xs px-5 py-2.5">Hubungi Saya</a>
-                <a href="{{ $data['profile']['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="btn-outline text-xs px-5 py-2.5">LinkedIn Profil</a>
+                <a href="mailto:<?php echo e($data['profile']['email']); ?>" class="btn-primary text-xs px-5 py-2.5">Hubungi Saya</a>
+                <a href="<?php echo e($data['profile']['linkedin']); ?>" target="_blank" rel="noopener noreferrer" class="btn-outline text-xs px-5 py-2.5">LinkedIn Profil</a>
             </div>
         </div>
     </section>
-</x-layout>
+ <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal23a33f287873b564aaf305a1526eada4)): ?>
+<?php $attributes = $__attributesOriginal23a33f287873b564aaf305a1526eada4; ?>
+<?php unset($__attributesOriginal23a33f287873b564aaf305a1526eada4); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal23a33f287873b564aaf305a1526eada4)): ?>
+<?php $component = $__componentOriginal23a33f287873b564aaf305a1526eada4; ?>
+<?php unset($__componentOriginal23a33f287873b564aaf305a1526eada4); ?>
+<?php endif; ?><?php /**PATH C:\laragon\www\webporto2\resources\views/experience.blade.php ENDPATH**/ ?>

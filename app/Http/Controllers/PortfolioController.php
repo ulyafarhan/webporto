@@ -19,24 +19,24 @@ class PortfolioController extends Controller
         return $this->portfolio->getAllData();
     }
 
-    public function home() { return view('home', ['data' => $this->getData()]); }
-    public function about() { return view('about', ['data' => $this->getData()]); }
-    public function experience() { return view('experience', ['data' => $this->getData()]); }
-    public function course() { return view('course', ['data' => $this->getData()]); }
+    public function home() 
+    { 
+        return view('home', ['data' => $this->getData()]); 
+    }
 
-    public function courseDetail($slug)
-    {
-        $data = $this->getData();
-        $item = collect($data['curriculum'])->firstWhere('slug', $slug);
+    public function about() 
+    { 
+        return view('about', ['data' => $this->getData()]); 
+    }
 
-        if (!$item) abort(404);
+    public function experience() 
+    { 
+        return view('experience', ['data' => $this->getData()]); 
+    }
 
-        $relatedProjects = collect($data['projects'])->where('curriculum_slug', $slug);
-
-        return view('course-detail', [
-            'data' => $data, 
-            'item' => $item,
-            'relatedProjects' => $relatedProjects
-        ]);
+    public function achievements() 
+    { 
+        // Mengarahkan ke view achievements
+        return view('achievements', ['data' => $this->getData()]); 
     }
 }

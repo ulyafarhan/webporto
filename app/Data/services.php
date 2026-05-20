@@ -2,23 +2,23 @@
 
 return [
     [
-        'title' => 'Web Development',
-        'description' => 'Membangun website responsif dan cepat dengan teknologi Laravel terbaru.',
-        'icon' => 'code',
+        'icon' => 'server',
+        'title' => 'Backend Engineering',
+        'description' => 'Membangun arsitektur server modular, RESTful API yang aman, serta logika bisnis yang solid menggunakan Laravel.'
     ],
     [
-        'title' => 'Backend API',
-        'description' => 'Merancang arsitektur API yang aman dan skalabel untuk aplikasi mobile/web.',
         'icon' => 'database',
+        'title' => 'Database Optimization',
+        'description' => 'Merancang skema basis data relasional, mengoptimalkan kueri kompleks, dan menerapkan strategi caching data.'
     ],
     [
-        'title' => 'UI Implementation',
-        'description' => 'Mengonversi desain visual menjadi kode frontend yang pixel-perfect.',
-        'icon' => 'layout',
+        'icon' => 'smartphone',
+        'title' => 'Responsive UI Deployment',
+        'description' => 'Implementasi komponen antarmuka yang modern, adaptif di berbagai perangkat, serta ramah aksesibilitas dengan Tailwind CSS.'
     ],
     [
-        'title' => 'Database Design',
-        'description' => 'Merancang skema database yang efisien dan optimal.',
-        'icon' => 'settings',
-    ]
+        'icon' => 'shield-check',
+        'title' => 'System Security Auditing',
+        'description' => 'Menganalisis celah keamanan perangkat lunak, menerapkan autentikasi berlapis, dan proteksi integritas data sistem.'
+    ],
 ];

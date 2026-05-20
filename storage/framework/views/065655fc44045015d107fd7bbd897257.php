@@ -1,17 +1,26 @@
-<x-layout :data="$data">
-    <x-slot:title>Tentang Saya</x-slot>
+<?php if (isset($component)) { $__componentOriginal23a33f287873b564aaf305a1526eada4 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal23a33f287873b564aaf305a1526eada4 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.layout','data' => ['data' => $data]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('layout'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['data' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($data)]); ?>
+     <?php $__env->slot('title', null, []); ?> Tentang Saya <?php $__env->endSlot(); ?>
 
     <section class="py-12 md:py-16 border-b border-slate-200/60 mb-12 animate-fade-in">
         <div class="flex flex-col sm:flex-row items-center sm:items-center gap-6 text-center sm:text-left">
             <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-slate-100 to-slate-50 border border-slate-200/60 p-2 shadow-sm shrink-0">
                 <div class="w-full h-full rounded-xl overflow-hidden bg-slate-200">
-                    <img src="{{ $data['profile']['avatar'] }}" alt="{{ $data['profile']['name'] }}" class="w-full h-full object-cover filter contrast-[1.02]">
+                    <img src="<?php echo e($data['profile']['avatar']); ?>" alt="<?php echo e($data['profile']['name']); ?>" class="w-full h-full object-cover filter contrast-[1.02]">
                 </div>
             </div>
             <div class="space-y-1.5">
                 <p class="text-primary text-[9px] uppercase tracking-widest font-black">Identity Narrative</p>
-                <h1 class="text-3xl font-black text-dark tracking-tight">Tentang {{ $data['profile']['name'] }}</h1>
-                <p class="text-slate-400 font-bold text-xs uppercase tracking-wider">{{ $data['profile']['role'] }}</p>
+                <h1 class="text-3xl font-black text-dark tracking-tight">Tentang <?php echo e($data['profile']['name']); ?></h1>
+                <p class="text-slate-400 font-bold text-xs uppercase tracking-wider"><?php echo e($data['profile']['role']); ?></p>
             </div>
         </div>
     </section>
@@ -25,7 +34,7 @@
                         Biodata Singkat
                     </div>
                     <p class="text-xs text-slate-500 leading-relaxed font-medium">
-                        {{ $data['profile']['bio'] }} Berasal dari Lhokseumawe, Aceh, saya mendedikasikan waktu akademik saya untuk meneliti optimasi kode komputer serta rekayasa sistem berbasis web.
+                        <?php echo e($data['profile']['bio']); ?> Berasal dari Lhokseumawe, Aceh, saya mendedikasikan waktu akademik saya untuk meneliti optimasi kode komputer serta rekayasa sistem berbasis web.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-100 space-y-2 text-[11px] text-slate-400 font-bold uppercase tracking-wider">
@@ -150,4 +159,13 @@
             </div>
         </div>
     </section>
-</x-layout>
+ <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal23a33f287873b564aaf305a1526eada4)): ?>
+<?php $attributes = $__attributesOriginal23a33f287873b564aaf305a1526eada4; ?>
+<?php unset($__attributesOriginal23a33f287873b564aaf305a1526eada4); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal23a33f287873b564aaf305a1526eada4)): ?>
+<?php $component = $__componentOriginal23a33f287873b564aaf305a1526eada4; ?>
+<?php unset($__componentOriginal23a33f287873b564aaf305a1526eada4); ?>
+<?php endif; ?><?php /**PATH C:\laragon\www\webporto2\resources\views/about.blade.php ENDPATH**/ ?>

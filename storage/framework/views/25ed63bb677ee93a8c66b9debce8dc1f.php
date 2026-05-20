@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Laravel 13, Portofolio, Web Developer, Teknik Informatika, Indonesia">
-    <meta name="author" content="{{ $data['profile']['name'] }}">
+    <meta name="author" content="<?php echo e($data['profile']['name']); ?>">
     
-    <title>{{ $title ?? 'Beranda' }} | {{ $data['profile']['name'] }}</title>
+    <title><?php echo e($title ?? 'Beranda'); ?> | <?php echo e($data['profile']['name']); ?></title>
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Portofolio {{ $data['profile']['name'] }} - Mahasiswa Teknik Informatika">
-    <link rel="canonical" href="{{ url()->current() }}">
-    <meta property="og:title" content="{{ $title ?? 'Beranda' }} | {{ $data['profile']['name'] }}">
-    <meta property="og:description" content="Portofolio {{ $data['profile']['name'] }} - Mahasiswa Teknik Informatika">
+    <meta name="description" content="Portofolio <?php echo e($data['profile']['name']); ?> - Mahasiswa Teknik Informatika">
+    <link rel="canonical" href="<?php echo e(url()->current()); ?>">
+    <meta property="og:title" content="<?php echo e($title ?? 'Beranda'); ?> | <?php echo e($data['profile']['name']); ?>">
+    <meta property="og:description" content="Portofolio <?php echo e($data['profile']['name']); ?> - Mahasiswa Teknik Informatika">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('logo.svg') }}">
+    <meta property="og:url" content="<?php echo e(url()->current()); ?>">
+    <meta property="og:image" content="<?php echo e(asset('logo.svg')); ?>">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ $title ?? 'Beranda' }} | {{ $data['profile']['name'] }}">
-    <meta name="twitter:description" content="Portofolio {{ $data['profile']['name'] }} - Mahasiswa Teknik Informatika">
-    <meta name="twitter:image" content="{{ asset('logo.svg') }}">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('logo.svg') }}">
-    <link rel="alternate icon" href="{{ asset('logo.svg') }}">
+    <meta name="twitter:title" content="<?php echo e($title ?? 'Beranda'); ?> | <?php echo e($data['profile']['name']); ?>">
+    <meta name="twitter:description" content="Portofolio <?php echo e($data['profile']['name']); ?> - Mahasiswa Teknik Informatika">
+    <meta name="twitter:image" content="<?php echo e(asset('logo.svg')); ?>">
+    <link rel="icon" type="image/svg+xml" href="<?php echo e(asset('logo.svg')); ?>">
+    <link rel="alternate icon" href="<?php echo e(asset('logo.svg')); ?>">
     
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     
@@ -84,7 +84,7 @@
     </style>
 </head>
 <body class="selection:bg-slate-950/10 selection:text-slate-950">
-    @php
+    <?php
         $navigationItems = [
             ['label' => 'Beranda', 'route' => 'home', 'active' => 'home', 'icon' => 'house'],
             ['label' => 'Tentang', 'route' => 'about', 'active' => 'about', 'icon' => 'user'],
@@ -101,12 +101,12 @@
             ['label' => 'GitHub', 'href' => $data['profile']['github'], 'icon' => 'git-branch', 'external' => true],
             ['label' => 'LinkedIn', 'href' => $data['profile']['linkedin'], 'icon' => 'chevron-last', 'external' => true],
         ];
-    @endphp
+    ?>
 
     <header class="fixed top-6 left-6 right-6 z-40 pointer-events-none">
         <div class="max-w-6xl mx-auto flex justify-between items-center w-full pointer-events-auto">
-            <a href="{{ route('home') }}" class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-slate-950 shadow-lg shadow-slate-200/50 border border-slate-100 transition-transform duration-500 hover:scale-110 hover:rotate-3" aria-label="Beranda">
-                <img src="{{ asset('logo.svg') }}" alt="Logo" class="w-5 h-5 object-contain">
+            <a href="<?php echo e(route('home')); ?>" class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-slate-950 shadow-lg shadow-slate-200/50 border border-slate-100 transition-transform duration-500 hover:scale-110 hover:rotate-3" aria-label="Beranda">
+                <img src="<?php echo e(asset('logo.svg')); ?>" alt="Logo" class="w-5 h-5 object-contain">
             </a>
 
             <div class="flex items-center gap-2 bg-white/80 backdrop-blur-xl px-5 py-3 rounded-2xl border border-slate-200/50 shadow-lg shadow-slate-200/30">
@@ -121,16 +121,16 @@
 
     <div class="fixed bottom-6 lg:bottom-10 left-1/2 -translate-x-1/2 z-50 w-max pointer-events-auto">
         <nav class="flex items-center gap-1.5 p-2 rounded-full bg-white/80 backdrop-blur-2xl border border-slate-200/60 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)]">
-            @foreach($navigationItems as $item)
-                <a href="{{ route($item['route']) }}" class="smart-nav-item {{ request()->routeIs($item['active']) ? 'active' : '' }}" aria-label="{{ $item['label'] }}">
-                    <i data-lucide="{{ $item['icon'] }}" class="w-5 h-5 shrink-0"></i>
-                    <span class="smart-nav-label">{{ $item['label'] }}</span>
+            <?php $__currentLoopData = $navigationItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <a href="<?php echo e(route($item['route'])); ?>" class="smart-nav-item <?php echo e(request()->routeIs($item['active']) ? 'active' : ''); ?>" aria-label="<?php echo e($item['label']); ?>">
+                    <i data-lucide="<?php echo e($item['icon']); ?>" class="w-5 h-5 shrink-0"></i>
+                    <span class="smart-nav-label"><?php echo e($item['label']); ?></span>
                 </a>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             
             <div class="w-px h-8 bg-slate-200/80 mx-1.5"></div>
             
-            <a href="mailto:{{ $data['profile']['email'] }}" class="smart-nav-item !bg-slate-950 !text-white hover:!bg-slate-800" aria-label="Hire Me">
+            <a href="mailto:<?php echo e($data['profile']['email']); ?>" class="smart-nav-item !bg-slate-950 !text-white hover:!bg-slate-800" aria-label="Hire Me">
                 <i data-lucide="mail" class="w-5 h-5 shrink-0"></i>
                 <span class="smart-nav-label !text-white">Let's Talk</span>
             </a>
@@ -139,7 +139,8 @@
 
     <main class="pt-32 pb-32">
         <div class="max-w-6xl mx-auto px-6">
-            {{ $slot }}
+            <?php echo e($slot); ?>
+
         </div>
     </main>
 
@@ -156,7 +157,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-white/10 pt-16">
                 <div class="md:col-span-5">
-                    <span class="text-xs font-black tracking-[0.2em] text-white uppercase block mb-4">{{ $data['profile']['name'] }}</span>
+                    <span class="text-xs font-black tracking-[0.2em] text-white uppercase block mb-4"><?php echo e($data['profile']['name']); ?></span>
                     <p class="text-xs text-slate-400 leading-relaxed font-medium max-w-sm">
                         Menghadirkan arsitektur perangkat lunak yang tangguh, sistem basis data terekayasa dengan presisi, dan antarmuka inklusif.
                     </p>
@@ -165,34 +166,36 @@
                 <div class="md:col-span-3">
                     <h3 class="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-6">Infrastruktur</h3>
                     <ul class="space-y-4">
-                        @foreach($socialItems as $item)
+                        <?php $__currentLoopData = $socialItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <li>
-                                <a href="{{ $item['href'] }}" class="flex items-center gap-3 text-xs font-bold text-slate-300 hover:text-white transition-colors" @if($item['external']) target="_blank" rel="noopener noreferrer" @endif>
-                                    <i data-lucide="{{ $item['icon'] }}" class="w-4 h-4"></i>
-                                    {{ $item['label'] }}
+                                <a href="<?php echo e($item['href']); ?>" class="flex items-center gap-3 text-xs font-bold text-slate-300 hover:text-white transition-colors" <?php if($item['external']): ?> target="_blank" rel="noopener noreferrer" <?php endif; ?>>
+                                    <i data-lucide="<?php echo e($item['icon']); ?>" class="w-4 h-4"></i>
+                                    <?php echo e($item['label']); ?>
+
                                 </a>
                             </li>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </ul>
                 </div>
 
                 <div class="md:col-span-4">
                     <h3 class="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-6">Konektivitas</h3>
                     <ul class="space-y-4">
-                        @foreach($contactItems as $item)
+                        <?php $__currentLoopData = $contactItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <li>
-                                <a href="{{ $item['href'] }}" class="flex items-start gap-3 text-xs font-bold text-slate-300 hover:text-white transition-colors break-all" @if($item['external']) target="_blank" rel="noopener noreferrer" @endif>
-                                    <i data-lucide="{{ $item['icon'] }}" class="w-4 h-4 shrink-0 mt-0.5"></i>
-                                    {{ $item['label'] }}
+                                <a href="<?php echo e($item['href']); ?>" class="flex items-start gap-3 text-xs font-bold text-slate-300 hover:text-white transition-colors break-all" <?php if($item['external']): ?> target="_blank" rel="noopener noreferrer" <?php endif; ?>>
+                                    <i data-lucide="<?php echo e($item['icon']); ?>" class="w-4 h-4 shrink-0 mt-0.5"></i>
+                                    <?php echo e($item['label']); ?>
+
                                 </a>
                             </li>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </ul>
                 </div>
             </div>
 
             <div class="pt-16 mt-16 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[9px] text-slate-500 font-black uppercase tracking-widest">
-                <div>© {{ date('Y') }} ALL RIGHTS RESERVED.</div>
+                <div>© <?php echo e(date('Y')); ?> ALL RIGHTS RESERVED.</div>
                 <div class="flex gap-6">
                     <span>My User PHP</span>
                     <span>Laravel v13</span>
@@ -248,4 +251,4 @@
         window.addEventListener('load', refreshIcons);
     </script>
 </body>
-</html>
+</html><?php /**PATH C:\laragon\www\webporto2\resources\views/components/layout.blade.php ENDPATH**/ ?>

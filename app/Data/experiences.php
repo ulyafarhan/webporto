@@ -2,24 +2,24 @@
 
 return [
     [
-        'title' => 'Sekretaris Divisi Infokom UKM PTQ Unimal',
-        'company' => 'Universitas Malikussaleh',
-        'period' => '2025 - 2026',
-        'description' => 'Memimpin pengembangan desain dan website internal dan mengadakan workshop rutin.',
-        'tags' => ['Leadership', 'Web Dasar', 'PHP', 'Tailwind', 'Canva', 'Figma']
+        'period' => '2025 - SEKARANG',
+        'company' => 'Platform Gampong Initiative',
+        'title' => 'Lead Fullstack Developer',
+        'description' => 'Merancang arsitektur sistem informasi desa terintegrasi, mengoptimalkan penayangan data publik regional, dan mengelola manajemen repositori Git tim.',
+        'tags' => ['Laravel', 'Filament', 'Tailwind CSS', 'MySQL']
     ],
     [
-        'title' => 'Junior Web Developer Intern',
-        'company' => 'Unimal Tech Startup',
-        'period' => 'Jan 2025 - Mar 2025',
-        'description' => 'Membangun fitur CRUD untuk aplikasi manajemen tugas menggunakan Laravel dan MySQL.',
-        'tags' => ['Laravel', 'MySQL', 'REST API', 'Git']
+        'period' => '2024 - 2025',
+        'company' => 'Himpunan Mahasiswa Teknik Informatika (HMTI)',
+        'title' => 'Anggota Divisi Kominfo / Akademik',
+        'description' => 'Mengkoordinasikan pelatihan pemrograman dasar internal, merancang silabus mini-bootcamp rekayasa web, serta menjadi pemateri dasar-dasar MVC framework.',
+        'tags' => ['Mentoring', 'Public Speaking', 'System Design']
     ],
     [
-        'title' => 'Freelance Developer',
-        'company' => 'Self-Employed',
-        'period' => '2025 - Sekarang',
-        'description' => 'Mengerjakan berbagai proyek landing page untuk klien lokal.',
-        'tags' => ['HTML', 'CSS', 'Tailwind']
-    ]
+        'period' => '2023 - 2024',
+        'company' => 'Independent Business Project PWA',
+        'title' => 'Software Developer',
+        'description' => 'Membangun aplikasi manajemen keuangan mahasiswa berbasis Progressive Web App (PWA) untuk menghitung kalkulasi margin profit dan perputaran omset toko kecil.',
+        'tags' => ['PWA', 'JavaScript', 'Alpine.js', 'Tailwind']
+    ],
 ];

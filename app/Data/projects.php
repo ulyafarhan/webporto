@@ -2,39 +2,27 @@
 
 return [
     [
-        'slug' => 'sistem-informasi-kampus',
-        'title' => 'Sistem Informasi Kampus',
-        'category' => 'Web App',
-        'description' => 'Manajemen data mahasiswa & nilai akademik secara terpusat.',
-        'image' => 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&h=400&auto=format',
-        'link' => 'https://github.com/ulyafarhan/my-web-personal',
-        'github' => 'https://github.com/ulyafarhan/my-web-personal',
-        'tags' => ['Laravel', 'MySQL'],
-        'curriculum_slug' => 'models-eloquent',
-        'featured' => true
+        'title' => 'Platform Informasi Portal Gampong',
+        'category' => 'Web Application',
+        'description' => 'Sistem informasi manajemen desa digital untuk mempermudah administrasi pelayanan surat menyurat dan transparansi anggaran publik.',
+        'image' => 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80',
+        'tags' => ['Laravel', 'Filament', 'Tailwind CSS'],
+        'github' => 'https://github.com/Ulfa'
     ],
     [
-        'slug' => 'e-commerce-sederhana',
-        'title' => 'E-Commerce Store',
-        'category' => 'Online Store',
-        'description' => 'Platform belanja online dengan sistem keranjang & checkout.',
-        'image' => 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=400&h=400&auto=format',
-        'link' => 'https://github.com/ulyafarhan/my-web-personal',
-        'github' => 'https://github.com/ulyafarhan/my-web-personal',
-        'tags' => ['PHP', 'Tailwind'],
-        'curriculum_slug' => 'migration-database',
-        'featured' => true
+        'title' => 'Progressive Web App Keuangan Mahasiswa',
+        'category' => 'PWA Development',
+        'description' => 'Aplikasi offline-first untuk pencatatan transaksi mikro bisnis mahasiswa lengkap dengan grafik analisis performa margin keuntungan.',
+        'image' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
+        'tags' => ['Alpine.js', 'Tailwind', 'PWA Architecture'],
+        'github' => 'https://github.com/Ulfa'
     ],
     [
-        'slug' => 'api-monitoring-system',
-        'title' => 'API Monitoring',
-        'category' => 'Backend Tool',
-        'description' => 'Dashboard untuk memantau kesehatan API secara real-time.',
-        'image' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&h=400&auto=format',
-        'link' => 'https://github.com/ulyafarhan/my-web-personal',
-        'github' => 'https://github.com/ulyafarhan/my-web-personal',
-        'tags' => ['Laravel', 'Redis'],
-        'curriculum_slug' => 'controllers',
-        'featured' => true
-    ]
+        'title' => 'Portfolio Minimalist Engine V2',
+        'category' => 'Web Personal Template',
+        'description' => 'Mesin situs portofolio super ringan berbasis static data providers dengan perolehan skor performa penuh 100/100 pada pengujian audit Google Lighthouse.',
+        'image' => 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80',
+        'tags' => ['Laravel 13', 'Tailwind CSS 4', 'Clean Code'],
+        'github' => 'https://github.com/Ulfa'
+    ],
 ];
